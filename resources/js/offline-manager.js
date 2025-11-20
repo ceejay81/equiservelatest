@@ -110,34 +110,18 @@ document.addEventListener('DOMContentLoaded', async () => {
     await window.offlineManager.init();
     console.log('Offline manager initialized');
     
-    // Update online/offline status
-    updateOnlineStatus();
-    window.addEventListener('online', updateOnlineStatus);
-    window.addEventListener('offline', updateOnlineStatus);
+    // Trigger background sync when coming online
+    window.addEventListener('online', () => {
+      if ('serviceWorker' in navigator && 'sync' in registration) {
+        navigator.serviceWorker.ready.then((reg) => {
+          return reg.sync.register('sync-sales');
+        });
+      }
+    });
   } catch (err) {
     console.error('Failed to initialize offline manager:', err);
   }
 });
-
-function updateOnlineStatus() {
-  const statusEl = document.getElementById('online-status');
-  if (!statusEl) return;
-  
-  if (navigator.onLine) {
-    statusEl.innerHTML = '<i class="fas fa-wifi text-success"></i> Online';
-    statusEl.className = 'badge badge-success';
-    
-    // Trigger background sync if available
-    if ('serviceWorker' in navigator && 'sync' in registration) {
-      navigator.serviceWorker.ready.then((reg) => {
-        return reg.sync.register('sync-sales');
-      });
-    }
-  } else {
-    statusEl.innerHTML = '<i class="fas fa-wifi-slash text-warning"></i> Offline';
-    statusEl.className = 'badge badge-warning';
-  }
-}
 
 // Export for use in other scripts
 export default window.offlineManager;

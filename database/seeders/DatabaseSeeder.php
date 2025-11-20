@@ -15,27 +15,20 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->command->info('🌱 Starting comprehensive database seeding...');
+        $this->command->info('🌱 Starting database seeding...');
         $this->command->newLine();
         
-        // Run comprehensive seeder
-        $this->call(ComprehensiveSeeder::class);
+        // Use DefenseSeeder for comprehensive, realistic data
+        // Perfect for thesis defense and demonstrations
+        $this->call(DefenseSeeder::class);
         
-        $this->command->newLine();
-        $this->command->info('✅ Database seeding completed successfully!');
-        $this->command->newLine();
+        // Alternative seeders (uncomment to use):
         
-        // Display login credentials
-        $this->command->info('📝 Login Credentials:');
-        $this->command->table(
-            ['Role', 'Email', 'Username', 'Password'],
-            [
-                ['Admin', 'admin@equiserve.test', 'admin', 'password'],
-                ['Manager', 'manager@equiserve.test', 'manager', 'password'],
-                ['Staff', 'staff@equiserve.test', 'staff', 'password'],
-                ['Staff', 'staff2@equiserve.test', 'staff2', 'password'],
-            ]
-        );
+        // AdminOnlySeeder - For manual CRUD testing (empty database + admin user)
+        // $this->call(AdminOnlySeeder::class);
+        
+        // ComprehensiveSeeder - For basic testing data
+        // $this->call(ComprehensiveSeeder::class);
     }
 }
 

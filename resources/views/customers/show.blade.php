@@ -226,7 +226,7 @@
     </div>
   </div>
 
-  <div class="col-lg-4 mb-3">
+  <div class="col-lg-4 mb-3 align-self-start">
     <div class="action-card">
       <h6><i class="fas fa-bolt mr-2" style="color: #F59E0B;"></i>Quick Actions</h6>
       <a href="/sales/create?customer={{ $customer->id }}" class="btn btn-primary action-btn">

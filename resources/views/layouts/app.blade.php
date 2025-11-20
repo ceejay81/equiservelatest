@@ -130,13 +130,6 @@
     </form>
 
     <ul class="navbar-nav ml-auto align-items-center">
-      <!-- Online/Offline Status -->
-      <li class="nav-item mr-2">
-        <span id="online-status" class="badge badge-success">
-          <i class="fas fa-wifi"></i> Online
-        </span>
-      </li>
-      
       <li class="nav-item position-relative">
         <a class="nav-link text-white" href="/notifications" role="button" title="Notifications">
           <i class="fas fa-bell"></i>
@@ -286,24 +279,6 @@
     deferredPrompt = null;
     document.getElementById('install-pwa').style.display = 'none';
   });
-
-  // Online/Offline Status
-  function updateOnlineStatus() {
-    const statusEl = document.getElementById('online-status');
-    if (!statusEl) return;
-    
-    if (navigator.onLine) {
-      statusEl.innerHTML = '<i class="fas fa-wifi"></i> Online';
-      statusEl.className = 'badge badge-success';
-    } else {
-      statusEl.innerHTML = '<i class="fas fa-wifi-slash"></i> Offline';
-      statusEl.className = 'badge badge-warning';
-    }
-  }
-
-  window.addEventListener('online', updateOnlineStatus);
-  window.addEventListener('offline', updateOnlineStatus);
-  updateOnlineStatus();
 
   // Mark active link based on path
   (function(){
