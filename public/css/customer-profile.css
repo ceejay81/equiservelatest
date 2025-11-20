@@ -1,0 +1,297 @@
+/* Customer Profile Styles */
+
+.customer-header {
+  background: linear-gradient(135deg, #10B981 0%, #059669 100%);
+  color: white;
+  padding: 32px;
+  border-radius: 12px;
+  margin-bottom: 24px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.07);
+}
+
+.customer-name {
+  font-size: 2rem;
+  font-weight: 700;
+  margin: 0 0 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+}
+
+.customer-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  opacity: 0.95;
+  font-size: 0.95rem;
+}
+
+.customer-meta-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.stat-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 20px;
+  height: 100%;
+  transition: all 0.2s;
+}
+
+.stat-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transform: translateY(-2px);
+}
+
+.stat-label {
+  color: #64748B;
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.stat-value {
+  color: #0F172A;
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.stat-icon {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+.stat-icon.blue { 
+  background: #DBEAFE; 
+  color: #3B82F6; 
+}
+
+.stat-icon.green { 
+  background: #D1FAE5; 
+  color: #10B981; 
+}
+
+.stat-icon.orange { 
+  background: #FED7AA; 
+  color: #F59E0B; 
+}
+
+.stat-icon.red { 
+  background: #FEE2E2; 
+  color: #EF4444; 
+}
+
+.modern-tabs {
+  background: white;
+  border-radius: 12px;
+  padding: 0;
+  border: 1px solid #E2E8F0;
+  overflow: hidden;
+}
+
+.modern-tabs .nav-tabs {
+  border: none;
+  background: #F8FAFC;
+  padding: 8px;
+  margin: 0;
+}
+
+.modern-tabs .nav-link {
+  border: none;
+  color: #64748B;
+  font-weight: 500;
+  padding: 10px 20px;
+  border-radius: 8px;
+  transition: all 0.2s;
+  margin-right: 4px;
+}
+
+.modern-tabs .nav-link:hover {
+  background: #E2E8F0;
+  color: #334155;
+}
+
+.modern-tabs .nav-link.active {
+  background: white;
+  color: #3B82F6;
+  font-weight: 600;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+}
+
+.modern-tabs .tab-content {
+  padding: 24px;
+}
+
+.loan-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 10px;
+  padding: 16px;
+  margin-bottom: 12px;
+  transition: all 0.2s;
+}
+
+.loan-card:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  border-color: #3B82F6;
+}
+
+.loan-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 12px;
+}
+
+.loan-number {
+  font-weight: 600;
+  color: #0F172A;
+  font-size: 1.1rem;
+}
+
+.loan-details {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px;
+}
+
+.loan-detail-item {
+  display: flex;
+  flex-direction: column;
+}
+
+.loan-detail-label {
+  font-size: 0.75rem;
+  color: #64748B;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.loan-detail-value {
+  font-weight: 600;
+  color: #0F172A;
+  font-size: 1rem;
+}
+
+.action-card {
+  background: white;
+  border: 1px solid #E2E8F0;
+  border-radius: 12px;
+  padding: 24px;
+  height: 100%;
+}
+
+.action-card h6 {
+  font-weight: 600;
+  color: #0F172A;
+  margin-bottom: 20px;
+  font-size: 1.1rem;
+}
+
+.action-btn {
+  width: 100%;
+  padding: 12px;
+  border-radius: 8px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  transition: all 0.2s;
+}
+
+.action-btn:hover {
+  transform: translateX(4px);
+}
+
+.rebate-table {
+  background: white;
+}
+
+.rebate-table thead th {
+  background: #F8FAFC;
+  color: #475569;
+  font-weight: 600;
+  font-size: 0.875rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border: none;
+  padding: 12px 16px;
+}
+
+.rebate-table tbody td {
+  padding: 14px 16px;
+  vertical-align: middle;
+  border-bottom: 1px solid #F1F5F9;
+}
+
+.rebate-table tbody tr:hover {
+  background: #F8FAFC;
+}
+
+.summary-box {
+  background: linear-gradient(135deg, #3B82F6 0%, #2563EB 100%);
+  color: white;
+  padding: 20px;
+  border-radius: 12px;
+  text-align: center;
+}
+
+.summary-label {
+  font-size: 0.875rem;
+  opacity: 0.9;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 2rem;
+  font-weight: 700;
+}
+
+.notes-section {
+  background: #FFFBEB;
+  border: 1px solid #FDE68A;
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.notes-section h6 {
+  color: #92400E;
+  font-weight: 600;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.notes-content {
+  color: #78350F;
+  font-size: 0.95rem;
+}
+
+.empty-state {
+  text-align: center;
+  padding: 48px 24px;
+  color: #94A3B8;
+}
+
+.empty-state i {
+  font-size: 3rem;
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.empty-state p {
+  margin: 0;
+  font-size: 1rem;
+}

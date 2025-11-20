@@ -1,0 +1,212 @@
+================================================================================
+                    VIEWS FOLDER STRUCTURE
+                    EquiServe System
+================================================================================
+
+resources/views/
+│
+├── 📄 dashboard.blade.php                    # Main dashboard/home page
+├── 📄 welcome.blade.php                      # Welcome/landing page
+│
+├── 📁 auth/                                  # Authentication Pages
+│   ├── confirm-password.blade.php            # Password confirmation
+│   ├── forgot-password.blade.php             # Forgot password form
+│   ├── login.blade.php                       # Login page
+│   ├── register.blade.php                    # User registration
+│   ├── reset-password.blade.php              # Password reset form
+│   └── verify-email.blade.php                # Email verification
+│
+├── 📁 customers/                             # Customer Management
+│   ├── create.blade.php                      # Create new customer
+│   ├── edit.blade.php                        # Edit customer details
+│   ├── index.blade.php                       # Customer list
+│   ├── show.blade.php                        # Customer details view
+│   └── 📁 partials/                          # Customer sub-views
+│       ├── _tab_activity.blade.php           # Activity history tab
+│       ├── _tab_loans.blade.php              # Customer loans tab
+│       ├── _tab_payments.blade.php           # Payment history tab
+│       ├── _tab_purchases.blade.php          # Purchase history tab
+│       └── _tab_rebates.blade.php            # Rebates tab
+│
+├── 📁 inventory/                             # Inventory Management
+│   └── index.blade.php                       # Inventory list & stock management
+│
+├── 📁 layouts/                               # Layout Templates
+│   ├── app.blade.php                         # Main application layout
+│   └── guest.blade.php                       # Guest/public layout
+│
+├── 📁 loans/                                 # Loan Management
+│   ├── amortization-print.blade.php          # Printable amortization schedule
+│   ├── amortization-schedule.blade.php       # Amortization schedule view
+│   ├── create.blade.php                      # Create new loan
+│   ├── index.blade.php                       # Loan list
+│   └── show.blade.php                        # Loan details (with ID verification)
+│
+├── 📁 notifications/                         # Notifications
+│   └── index.blade.php                       # Notifications list
+│
+├── 📁 products/                              # Product Management
+│   └── index.blade.php                       # Product catalog (with location & color)
+│
+├── 📁 profile/                               # User Profile
+│   └── edit.blade.php                        # Edit user profile
+│
+├── 📁 reports/                               # Reports & Analytics
+│   ├── collections.blade.php                 # Collections report
+│   ├── customer-statement-pdf.blade.php      # Customer statement PDF
+│   ├── customer-statement.blade.php          # Customer statement view
+│   ├── index.blade.php                       # Reports dashboard
+│   ├── inventory.blade.php                   # Inventory report
+│   ├── reconciliation.blade.php              # Daily reconciliation
+│   ├── sales.blade.php                       # Sales report
+│   ├── stock-movements.blade.php             # Stock movement report
+│   └── top-products.blade.php                # Top selling products
+│
+├── 📁 sales/                                 # Sales Management
+│   ├── create.blade.php                      # Create sale (with ID verification for loans)
+│   ├── index.blade.php                       # Sales list
+│   ├── print.blade.php                       # Printable receipt
+│   ├── reconciliation.blade.php              # Sales reconciliation
+│   └── show.blade.php                        # Sale details
+│
+├── 📁 settings/                              # System Settings
+│   ├── audit.blade.php                       # Settings audit log
+│   ├── import-preview.blade.php              # Settings import preview
+│   ├── index.blade.php                       # Settings dashboard
+│   ├── loan-penalty.blade.php                # Loan & penalty settings
+│   ├── show.blade.php                        # Settings group view
+│   └── 📁 partials/                          # Settings sub-views
+│       ├── company.blade.php                 # Company settings
+│       ├── inventory.blade.php               # Inventory settings
+│       ├── loan.blade.php                    # Loan settings
+│       ├── modules.blade.php                 # Module settings (removed)
+│       ├── notifications.blade.php           # Notification settings
+│       ├── payment.blade.php                 # Payment settings
+│       ├── regional.blade.php                # Regional settings
+│       └── tax.blade.php                     # Tax settings
+│
+├── 📁 users/                                 # User Management
+│   ├── index.blade.php                       # User list
+│   └── profile.blade.php                     # User profile view
+│
+└── 📁 vendor/                                # Third-party Views
+    └── 📁 pagination/                        # Pagination templates
+        ├── bootstrap-4.blade.php             # Bootstrap 4 pagination
+        ├── bootstrap-5.blade.php             # Bootstrap 5 pagination
+        ├── default.blade.php                 # Default pagination
+        ├── semantic-ui.blade.php             # Semantic UI pagination
+        ├── simple-bootstrap-4.blade.php      # Simple Bootstrap 4
+        ├── simple-bootstrap-5.blade.php      # Simple Bootstrap 5
+        ├── simple-default.blade.php          # Simple default
+        ├── simple-tailwind.blade.php         # Simple Tailwind
+        └── tailwind.blade.php                # Tailwind pagination
+
+================================================================================
+                            SUMMARY
+================================================================================
+
+Total Folders: 13
+Total Files: 62
+
+Main Modules:
+  ✓ Authentication (6 files)
+  ✓ Customers (5 files + 5 partials)
+  ✓ Products (1 file)
+  ✓ Inventory (1 file)
+  ✓ Sales (5 files) - Includes ID verification for loans
+  ✓ Loans (5 files) - Includes ID verification display
+  ✓ Reports (9 files)
+  ✓ Settings (5 files + 8 partials)
+  ✓ Users (2 files)
+  ✓ Notifications (1 file)
+  ✓ Profile (1 file)
+
+Recent Updates:
+  🆕 ID Verification added to sales/create.blade.php
+  🆕 ID Verification display in loans/show.blade.php
+  🆕 Location & Color fields in products/index.blade.php
+  🆕 Location & Color display in inventory/index.blade.php
+  ❌ Module configuration removed from settings
+
+================================================================================
+                        KEY FEATURES BY VIEW
+================================================================================
+
+📊 SALES (sales/create.blade.php)
+  • Customer selection
+  • Sale type (Cash/Loan)
+  • Payment mode (Cash/Online)
+  • Product items with quantity & pricing
+  • Loan terms (for installment sales)
+  • 🆕 ID Verification (for loan sales)
+  • Discount management
+  • Online payment proof upload
+
+💰 LOANS (loans/show.blade.php)
+  • Loan details & terms
+  • Payment schedule
+  • Payment history
+  • Amortization schedule
+  • Penalty tracking
+  • Rebate management
+  • 🆕 ID Verification display
+  • Customer information
+
+📦 PRODUCTS (products/index.blade.php)
+  • Product catalog
+  • SKU & pricing
+  • Stock levels
+  • Margin calculation
+  • 🆕 Location tracking (shelves, warehouses)
+  • 🆕 Color/Variant tracking
+  • Category & brand filtering
+  • Import/Export functionality
+
+🏪 INVENTORY (inventory/index.blade.php)
+  • Stock management
+  • Stock adjustments
+  • Stock receiving
+  • Movement history
+  • 🆕 Location display
+  • 🆕 Color display
+  • Low stock alerts
+
+👥 CUSTOMERS (customers/show.blade.php)
+  • Customer profile
+  • Purchase history
+  • Loan accounts
+  • Payment history
+  • Rebates
+  • Activity timeline
+
+⚙️ SETTINGS (settings/index.blade.php)
+  • Loan & Penalty settings
+  • Inventory thresholds
+  • Notification preferences
+  • Payment methods
+  • Settings audit log
+  • Import/Export settings
+
+📈 REPORTS
+  • Sales reports
+  • Collections reports
+  • Inventory reports
+  • Customer statements
+  • Top products
+  • Stock movements
+  • Daily reconciliation
+
+================================================================================
+                            NOTES
+================================================================================
+
+1. All views use Blade templating engine
+2. Main layout: layouts/app.blade.php
+3. Guest layout: layouts/guest.blade.php
+4. Pagination uses Bootstrap 4 by default
+5. All forms include CSRF protection
+6. Responsive design for mobile/tablet/desktop
+7. Font Awesome icons used throughout
+8. jQuery and Bootstrap JavaScript components
+
+================================================================================
