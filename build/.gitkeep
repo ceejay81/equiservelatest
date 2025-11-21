@@ -1,0 +1,7 @@
+# Build Resources Directory
+
+Place application icons and other build resources here:
+- icon.ico (Windows icon)
+- icon.icns (macOS icon)
+- icon.png (Linux icon, 512x512 recommended)
+- Any other assets needed for the build process

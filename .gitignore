@@ -22,3 +22,19 @@
 Homestead.json
 Homestead.yaml
 Thumbs.db
+
+# Electron build output
+/dist
+/out
+
+# Electron desktop environment file
+.env.desktop
+
+# PHP binaries (too large for git, download separately)
+/php-binaries/win/*
+/php-binaries/mac/*
+/php-binaries/linux/*
+!php-binaries/README.md
+
+# Build resources (add actual icons, ignore temp files)
+/build/*.tmp

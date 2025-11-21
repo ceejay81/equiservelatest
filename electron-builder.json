@@ -1,0 +1,87 @@
+{
+  "appId": "com.equiserve.app",
+  "productName": "EquiServe",
+  "directories": {
+    "output": "dist",
+    "buildResources": "build"
+  },
+  "files": [
+    "electron/**/*",
+    "public/**/*",
+    "resources/**/*",
+    "storage/app/settings/**/*",
+    "!storage/app/private/**/*",
+    "!storage/framework/**/*",
+    "!storage/logs/**/*",
+    "app/**/*",
+    "bootstrap/**/*",
+    "config/**/*",
+    "database/migrations/**/*",
+    "database/seeders/**/*",
+    "routes/**/*",
+    "artisan",
+    "composer.json",
+    "composer.lock",
+    ".env.example"
+  ],
+  "extraResources": [
+    {
+      "from": "php-binaries/${os}",
+      "to": "php",
+      "filter": ["**/*"]
+    },
+    {
+      "from": "vendor",
+      "to": "vendor",
+      "filter": ["**/*"]
+    }
+  ],
+  "win": {
+    "target": [
+      {
+        "target": "nsis",
+        "arch": ["x64"]
+      },
+      {
+        "target": "portable",
+        "arch": ["x64"]
+      }
+    ],
+    "icon": "build/icon.ico"
+  },
+  "nsis": {
+    "oneClick": false,
+    "allowToChangeInstallationDirectory": true,
+    "createDesktopShortcut": true,
+    "createStartMenuShortcut": true
+  },
+  "mac": {
+    "target": ["dmg"],
+    "category": "public.app-category.business",
+    "icon": "build/icon.icns"
+  },
+  "dmg": {
+    "contents": [
+      {
+        "x": 130,
+        "y": 220
+      },
+      {
+        "x": 410,
+        "y": 220,
+        "type": "link",
+        "path": "/Applications"
+      }
+    ]
+  },
+  "linux": {
+    "target": ["AppImage", "deb"],
+    "category": "Office",
+    "icon": "build/icon.png"
+  },
+  "publish": {
+    "provider": "github",
+    "owner": "your-github-username",
+    "repo": "your-repo-name"
+  }
+}
